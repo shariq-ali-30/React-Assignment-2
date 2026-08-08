@@ -19,24 +19,19 @@ function App() {
                     <a href="">Contact</a>
                 </div>
 
-                <div className="icons">
-                    <div>
-                        <i className="ph ph-magnifying-glass"></i>
-                    </div>
-                    <div>
-                        <i className="ph ph-user"></i>
-                    </div>
-                    <div>
-                        <i className="ph ph-shopping-cart-simple"></i>
-                        <span>2</span>
-                    </div>
+                <div className="search-bar">
+                    <input type="text" placeholder="Search your favourite food..." />
                 </div>
 
             </div>
 
-            <section className="hero-section">
-                <img src={heroImage} alt="hero image" />
-            </section>
+            <div className="continer">
+
+                <section className="hero-section">
+                    <img src={heroImage} alt="hero image" />
+                </section>
+                
+            </div>
         </>
     )
 }
