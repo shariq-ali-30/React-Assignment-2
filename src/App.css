@@ -1,0 +1,226 @@
+:root {
+    /* =========================
+      BODY
+  ========================== */
+    --body-bg: #FFFDF8;
+    --body-text-primary: #1A1A1A;
+    --body-text-secondary: #5F5F5F;
+    --body-border-color: #EFE7DD;
+
+    /* =========================
+      BRAND COLORS
+  ========================== */
+    --primary-color: #FF6B00;
+    --primary-hover: #E65F00;
+    --primary-light: #FFF1E5;
+
+    --secondary-color: #FFB54A;
+    --accent-color: #FFC96B;
+
+    /* =========================
+      NAVBAR
+  ========================== */
+    --navbar-bg: #FFFFFF;
+    --navbar-border: 1px solid #ECECEC;
+    --navbar-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+
+    --navbar-link: #1A1A1A;
+    --navbar-link-hover: #FF6B00;
+    --navbar-link-active: #FF6B00;
+
+    /* =========================
+      LOGO
+  ========================== */
+    --logo-primary: #FF6B00;
+    --logo-secondary: #111111;
+
+    /* =========================
+      HERO SECTION
+  ========================== */
+    --hero-bg: #FFFDF8;
+    --hero-heading: #111111;
+    --hero-highlight: #FF6B00;
+    --hero-text: #555555;
+
+    /* =========================
+      BUTTONS
+  ========================== */
+    --btn-primary-bg: #FF6B00;
+    --btn-primary-hover: #E65F00;
+    --btn-primary-text: #FFFFFF;
+
+    --btn-secondary-bg: #FFFFFF;
+    --btn-secondary-text: #111111;
+    --btn-secondary-border: #DDDDDD;
+
+    /* =========================
+      CARDS
+  ========================== */
+    --card-bg: #FFFFFF;
+    --card-border: #EEEEEE;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    --card-shadow-hover: 0 16px 40px rgba(0, 0, 0, .12);
+
+    /* =========================
+      PRODUCT CARD
+  ========================== */
+    --product-title: #222222;
+    --product-price: #111111;
+    --product-rating: #FF8A00;
+    --product-add-btn: #FF6B00;
+    --product-add-btn-hover: #E65F00;
+
+    /* =========================
+      SECTION
+  ========================== */
+    --section-bg: #FFFDF8;
+    --section-title: #1A1A1A;
+    --section-subtitle: #FF6B00;
+
+    /* =========================
+      ICONS
+  ========================== */
+    --icon-color: #FF6B00;
+    --icon-bg: #FFF3E8;
+
+    /* =========================
+      INPUT
+  ========================== */
+    --input-bg: #FFFFFF;
+    --input-border: #DDDDDD;
+    --input-focus: #FF6B00;
+    --input-placeholder: #999999;
+    --input-text: #222222;
+
+    /* =========================
+      NEWSLETTER
+  ========================== */
+    --newsletter-bg: linear-gradient(90deg, #FF6B00, #FF7E1D);
+    --newsletter-heading: #FFFFFF;
+    --newsletter-text: #FFF5F0;
+
+    /* =========================
+      FOOTER
+  ========================== */
+    --footer-bg: #121212;
+    --footer-heading: #FFFFFF;
+    --footer-text: #C8C8C8;
+    --footer-link: #E5E5E5;
+    --footer-link-hover: #FF6B00;
+    --footer-border: #2C2C2C;
+
+    /* =========================
+      SOCIAL
+  ========================== */
+    --social-bg: #1F1F1F;
+    --social-color: #FFFFFF;
+    --social-hover: #FF6B00;
+
+    /* =========================
+      BADGES
+  ========================== */
+    --badge-bg: #FF6B00;
+    --badge-text: #FFFFFF;
+
+    /* =========================
+      SHADOWS
+  ========================== */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 12px 35px rgba(0, 0, 0, .12);
+
+    /* =========================
+      BORDER RADIUS
+  ========================== */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 30px;
+    --radius-round: 999px;
+
+    /* =========================
+      TRANSITION
+  ========================== */
+    --transition: all .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 70px;
+    padding: 0 30px;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: var(--body-text-secondary);
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--body-text-primary);
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .icons div {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .icons div:hover {
+    background-color: #f3f4f6;
+}
+
+.navbar .icons div span {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.navbar .icons i {
+    font-size: 24px;
+}
+
+.hero-section img {
+    width: 100%;
+}
