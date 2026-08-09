@@ -10,7 +10,7 @@
   --secondary-text: #555555;
   --muted-text: #999999;
 
-  --body-bg: #FFFDF9;
+  --body-bg: #FFFFFF;
   --body-text: var(--primary-text);
 
 
@@ -80,6 +80,8 @@
   --food-card-bg: #FFFFFF;
   --food-card-border: 1px solid #EEEEEE;
   --food-card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  --food-card-image-bg: #F3F4F6;
 
   --food-card-title: var(--primary-text);
   --food-card-text: var(--secondary-text);
@@ -165,6 +167,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--body-text);
 }
 
 .continer {
@@ -255,11 +262,77 @@
   margin-top: 12px;
 }
 
+.cards-section {
+  max-width: 1450px;
+  padding: 0 30px;
+}
+
 .cards-section .cards {
   display: flex;
   flex-wrap: wrap;
 }
 
 .cards-section .cards .card {
+  max-width: 280px;
+  width: 100%;
+  background-color: var(--food-card-bg);
+  border: var(--food-card-border);
+  box-shadow: var(--food-card-shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
 
+.cards-section .cards .card .image {
+  width: 100%;
+  height: 200px;
+  background-color: var(--food-card-image-bg);
+  overflow: hidden;
+}
+
+.cards-section .cards .card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.2s ease;
+}
+
+.cards-section .cards .card .image img:hover {
+  scale: 1.1;
+}
+
+.cards-section .cards .card .details {
+  padding: 14px;
+}
+
+.cards-section .cards .card .details h3 {
+  font-size: 18px;
+}
+
+.cards-section .cards .card .details > p {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+.cards-section .cards .card .details div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cards-section .cards .card .details div p {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cards-section .cards .card .details div span {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }

@@ -46,7 +46,11 @@ function App() {
                             </div>
                             <div className="details">
                                 <h3>Cheezy Margherita pizza</h3>
-                                <p> 4.6</p>
+                                <p><i class="ph-fill ph-star"></i> 4.6</p>
+                                <div>
+                                    <p>Rs. 180</p>
+                                    <span><i class="ph-bold ph-plus"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>
