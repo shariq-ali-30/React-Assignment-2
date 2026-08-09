@@ -1,147 +1,163 @@
 :root {
-  /* =========================
-      BODY
-  ========================== */
-  --body-bg: #FFFDF8;
-  --body-text-primary: #1A1A1A;
-  --body-text-secondary: #5F5F5F;
-  --body-border-color: 1px solid #EFE7DD;
 
   /* =========================
-      BRAND COLORS
+     GLOBAL
   ========================== */
-  --primary-color: #FF6B00;
-  --primary-hover: #E65F00;
-  --primary-light: #FFF1E5;
 
-  --secondary-color: #FFB54A;
-  --accent-color: #FFC96B;
+  --primary-color: #FF641F;
+
+  --primary-text: #111111;
+  --secondary-text: #555555;
+  --muted-text: #999999;
+
+  --body-bg: #FFFDF9;
+  --body-text: var(--primary-text);
+
 
   /* =========================
-      NAVBAR
+     NAVBAR
   ========================== */
+
   --navbar-bg: #FFFFFF;
-  --navbar-border: 1px solid #ECECEC;
-  --navbar-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  --navbar-border: 1px solid #EEEEEE;
+  --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 
-  --navbar-link: #1A1A1A;
-  --navbar-link-hover: #FF6B00;
-  --navbar-link-active: #FF6B00;
+  --navbar-text: #111111;
+  --navbar-text-hover: var(--primary-color);
+  --navbar-text-active: var(--primary-color);
 
-  /* =========================
-      LOGO
-  ========================== */
-  --logo-primary: #FF6B00;
-  --logo-secondary: #111111;
 
   /* =========================
-      HERO SECTION
+     LOGO
   ========================== */
-  --hero-bg: #FFFDF8;
-  --hero-heading: #111111;
-  --hero-highlight: #FF6B00;
-  --hero-text: #555555;
+
+  --logo-primary: #111111;
+  --logo-secondary: var(--primary-color);
+
 
   /* =========================
-      BUTTONS
+     SEARCH BAR
   ========================== */
-  --btn-primary-bg: #FF6B00;
-  --btn-primary-hover: #E65F00;
-  --btn-primary-text: #FFFFFF;
 
-  --btn-secondary-bg: #FFFFFF;
-  --btn-secondary-text: #111111;
-  --btn-secondary-border: 1px solid #DDDDDD;
+  --search-bg: #FFFFFF;
+  --search-border: 1px solid #DDDDDD;
+  --search-border-focus: var(--primary-color);
+  --search-text: var(--primary-text);
+  --search-placeholder: #999999;
+  --search-icon: #111111;
 
-  /* =========================
-      CARDS
-  ========================== */
-  --card-bg: #FFFFFF;
-  --card-border: 1px solid #EEEEEE;
-  --card-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-  --card-shadow-hover: 0 16px 40px rgba(0, 0, 0, .12);
+  --search-shadow: none;
+
 
   /* =========================
-      PRODUCT CARD
+     HERO
   ========================== */
-  --product-title: #222222;
-  --product-price: #111111;
-  --product-rating: #FF8A00;
-  --product-add-btn: #FF6B00;
-  --product-add-btn-hover: #E65F00;
+
+  --hero-bg: #FFF9F2;
+  --hero-title: var(--primary-text);
+  --hero-highlight: var(--primary-color);
+  --hero-text: var(--secondary-text);
+
+  --hero-button-bg: var(--primary-color);
+  --hero-button-text: #FFFFFF;
+  --hero-button-hover: #E95417;
+
 
   /* =========================
-      SECTION
+     SECTION
   ========================== */
-  --section-bg: #FFFDF8;
-  --section-title: #1A1A1A;
-  --section-subtitle: #FF6B00;
+
+  --section-bg: #FFFFFF;
+  --section-title: var(--primary-text);
+  --section-subtitle: var(--primary-color);
+  --section-text: var(--secondary-text);
+
 
   /* =========================
-      ICONS
+     FOOD CARD
   ========================== */
-  --icon-color: #FF6B00;
-  --icon-bg: #FFF3E8;
+
+  --food-card-bg: #FFFFFF;
+  --food-card-border: 1px solid #EEEEEE;
+  --food-card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  --food-card-title: var(--primary-text);
+  --food-card-text: var(--secondary-text);
+  --food-card-price: var(--primary-text);
+  --food-card-rating: var(--primary-color);
+
+  --food-card-button-bg: var(--primary-color);
+  --food-card-button-text: #FFFFFF;
+
 
   /* =========================
-      INPUT
+     WHY CHOOSE US
   ========================== */
-  --input-bg: #FFFFFF;
-  --input-border: 1px solid #DDDDDD;
-  --input-focus: #FF6B00;
-  --input-placeholder: #999999;
-  --input-text: #222222;
+
+  --features-bg: #FFF9F2;
+  --feature-icon-bg: #FFF0E5;
+  --feature-icon: var(--primary-color);
+
+  --feature-title: var(--primary-text);
+  --feature-text: var(--secondary-text);
+
+  --feature-border: 1px solid #EDE3D9;
+
 
   /* =========================
-      NEWSLETTER
+     NEWSLETTER
   ========================== */
-  --newsletter-bg: linear-gradient(90deg, #FF6B00, #FF7E1D);
-  --newsletter-heading: #FFFFFF;
-  --newsletter-text: #FFF5F0;
+
+  --newsletter-bg: var(--primary-color);
+  --newsletter-title: #FFFFFF;
+  --newsletter-text: #FFF4ED;
+
+  --newsletter-input-bg: #FFFFFF;
+  --newsletter-input-text: var(--primary-text);
+  --newsletter-input-placeholder: #999999;
+
+  --newsletter-button-bg: #111111;
+  --newsletter-button-text: #FFFFFF;
+
 
   /* =========================
-      FOOTER
+     FOOTER
   ========================== */
+
   --footer-bg: #121212;
-  --footer-heading: #FFFFFF;
-  --footer-text: #C8C8C8;
-  --footer-link: #E5E5E5;
-  --footer-link-hover: #FF6B00;
-  --footer-border: 1px solid #2C2C2C;
+
+  --footer-title: #FFFFFF;
+  --footer-text: #CCCCCC;
+  --footer-link: #CCCCCC;
+  --footer-link-hover: var(--primary-color);
+
+  --footer-border: 1px solid #303030;
+
 
   /* =========================
-      SOCIAL
+     SOCIAL ICONS
   ========================== */
-  --social-bg: #1F1F1F;
-  --social-color: #FFFFFF;
-  --social-hover: #FF6B00;
+
+  --social-bg: #1E1E1E;
+  --social-icon: #FFFFFF;
+  --social-hover: var(--primary-color);
+
 
   /* =========================
-      BADGES
+     COMMON
   ========================== */
-  --badge-bg: #FF6B00;
-  --badge-text: #FFFFFF;
 
-  /* =========================
-      SHADOWS
-  ========================== */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
-  --shadow-md: 0 6px 18px rgba(0, 0, 0, .08);
-  --shadow-lg: 0 12px 35px rgba(0, 0, 0, .12);
+  --border-color: #EEEEEE;
 
-  /* =========================
-      BORDER RADIUS
-  ========================== */
+  --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --radius-xl: 30px;
-  --radius-round: 999px;
+  --radius-pill: 50px;
 
-  /* =========================
-      TRANSITION
-  ========================== */
-  --transition: all .3s ease;
+  --transition: 0.3s ease;
 }
 
 * {
@@ -152,7 +168,7 @@
 }
 
 .continer {
-  max-width: 1450px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -207,5 +223,43 @@
 
 .hero-section img {
   width: 100%;
-  max-width: 1450px;
+  max-height: calc(98vh - 70px);
+  object-fit: cover;
+}
+
+.section-title {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-title p {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.section-title span {
+  width: 50px;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 999px;
+  margin-top: 12px;
+}
+
+.cards-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-section .cards .card {
+
 }
