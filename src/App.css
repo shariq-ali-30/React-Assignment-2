@@ -200,19 +200,42 @@ body {
 }
 
 .navbar .nav-links a {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   text-decoration: none;
-  color: var(--body-text-secondary);
+  color: var(--secondary-text);
   transition: color 0.2s ease;
+}
+
+.navbar .nav-links a.active {
+  color: var(--primary-text);
 }
 
 .navbar .nav-links a:hover {
   color: var(--body-text-primary);
 }
 
+.navbar .nav-links a span {
+  width: 0;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 999px;
+  visibility: hidden;
+  transition: width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.navbar .nav-links a.active span {
+  visibility: visible;
+  width: 30px;
+}
+
 .navbar .search-bar {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: 40px;
+  font-size: 15px;
   position: relative;
 }
 
@@ -220,12 +243,29 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 6px;
-  border: var(--card-border);
+  background-color: var(--search-bg);
+  border: var(--search-border);
   border-width: 1.5px;
+  padding: 0 12px 0 32px;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
 .navbar .search-bar input::placeholder {
-  color: initial;
+  color: var(--search-placeholder);
+}
+
+.navbar .search-bar input:focus {
+  border-color: var(--primary-color);
+}
+
+.navbar .search-bar i {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: var(--search-placeholder);
 }
 
 .hero-section img {
@@ -264,12 +304,15 @@ body {
 
 .cards-section {
   max-width: 1450px;
+  margin: 0 auto;
   padding: 0 30px;
 }
 
 .cards-section .cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .cards-section .cards .card {
@@ -308,7 +351,7 @@ body {
   font-size: 18px;
 }
 
-.cards-section .cards .card .details > p {
+.cards-section .cards .card .details>p {
   font-weight: 600;
   color: var(--primary-color);
   margin-top: 10px;
