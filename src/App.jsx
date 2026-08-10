@@ -1,6 +1,9 @@
 import './App.css'
+import Card from './components/Card'
 import logo from './assets/logo.png'
 import heroImage from './assets/hero-banner.png'
+import newsletterImage from './assets/newsletter-image.png'
+import footerLogo from './assets/footer-logo.png'
 
 function App() {
     return (
@@ -21,7 +24,7 @@ function App() {
                     </div>
 
                     <div className="search-bar">
-                        <i class="ph-bold ph-magnifying-glass"></i>
+                        <i className="ph-bold ph-magnifying-glass"></i>
                         <input type="text" placeholder="Search your favourite food..." />
                     </div>
 
@@ -40,47 +43,9 @@ function App() {
                     </div>
 
                     <div className="cards">
-
-                        <div className="card">
-                            <div className="image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLQ89CA9ka1UCO7Jj2yPGeCfcWBnGzae5Q-SdGV1E1_A&s=10" alt="" />
-                            </div>
-                            <div className="details">
-                                <h3>Cheezy Margherita pizza</h3>
-                                <p><i class="ph-fill ph-star"></i> 4.6</p>
-                                <div>
-                                    <p>Rs. 180</p>
-                                    <span><i class="ph-bold ph-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLQ89CA9ka1UCO7Jj2yPGeCfcWBnGzae5Q-SdGV1E1_A&s=10" alt="" />
-                            </div>
-                            <div className="details">
-                                <h3>Cheezy Margherita pizza</h3>
-                                <p><i class="ph-fill ph-star"></i> 4.6</p>
-                                <div>
-                                    <p>Rs. 180</p>
-                                    <span><i class="ph-bold ph-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLQ89CA9ka1UCO7Jj2yPGeCfcWBnGzae5Q-SdGV1E1_A&s=10" alt="" />
-                            </div>
-                            <div className="details">
-                                <h3>Cheezy Margherita pizza</h3>
-                                <p><i class="ph-fill ph-star"></i> 4.6</p>
-                                <div>
-                                    <p>Rs. 180</p>
-                                    <span><i class="ph-bold ph-plus"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
+                        <Card />
+                        <Card />
+                        <Card />
                     </div>
 
                 </section>
@@ -97,7 +62,7 @@ function App() {
 
                         <div className="card">
                             <div className="icon">
-                                <i class="fa-solid fa-motorcycle"></i>
+                                <i className="fa-solid fa-motorcycle"></i>
                             </div>
                             <div>
                                 <h3>Fast Delivery</h3>
@@ -107,17 +72,17 @@ function App() {
 
                         <div className="card">
                             <div className="icon">
-                                <i class="ph-fill ph-seal-percent"></i>
+                                <i className="ph-fill ph-seal-percent"></i>
                             </div>
                             <div>
                                 <h3>Fast Delivery</h3>
                                 <p>Get your fvourite food delivered hot & fresh.</p>
                             </div>
                         </div>
-                        
+
                         <div className="card">
                             <div className="icon">
-                                <i class="fa-solid fa-headset"></i>
+                                <i className="fa-solid fa-headset"></i>
                             </div>
                             <div>
                                 <h3>Fast Delivery</h3>
@@ -129,31 +94,55 @@ function App() {
 
                 </section>
 
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                <section className="newsletter-section">
+                    <div className="left">
+                        <img src={newsletterImage} />
+                        <div>
+                            <h3>Hungry? We've got you!</h3>
+                            <p>Subscribe now and get updates on exclusive offers and new arrivals.</p>
+                        </div>
+                    </div>
+                    <div className="right">
+                        <input type="text" placeholder="Enter yoyr email" />
+                        <button>Subscribe <i className="ph ph-paper-plane-tilt"></i></button>
+                    </div>
+                </section>
+
+                <footer>
+                    <div className='footer-content'>
+                        <div className='column'>
+                            <img src={footerLogo}/>
+                            <span>Good food at your doorstep. Every time!</span>
+                            <div className="links">
+                                <i className="fa-brands fa-facebook-f"></i>
+                                <i className="fa-brands fa-instagram"></i>
+                                <i className="fa-brands fa-twitter"></i>
+                                <i className="fa-brands fa-youtube"></i>
+                            </div>
+                        </div>
+                        <div className='column'>
+                            <p>Quick Links</p>
+                            <a href="">Home</a>
+                            <a href="">Menu</a>
+                            <a href="">About Us</a>
+                            <a href="">Contact</a>
+                        </div>
+                        <div className='column'>
+                            <p>Company</p>
+                            <a href="">About Us</a>
+                            <a href="">Career</a>
+                            <a href="">Privacy Policy</a>
+                            <a href="">Terms & Conditions</a>
+                            <a href="">FAQ</a>
+                        </div>
+                        <div className='column'>
+                            <p>Contact Us</p>
+                            <a href=""><i className="ph ph-phone"></i> +92 3706831894</a>
+                            <a href=""><i className="ph ph-envelope"></i> foodiefast@gmial.com</a>
+                            <a href=""><i className="ph ph-map-pin"></i> Street 12, Gulshan-e-Iqbal, Karachi, Pakistan</a>
+                        </div>
+                    </div>
+                </footer>
 
             </div>
         </>

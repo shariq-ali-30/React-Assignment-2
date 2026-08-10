@@ -1,9 +1,4 @@
 :root {
-
-  /* =========================
-     GLOBAL
-  ========================== */
-
   --primary-color: #FF641F;
 
   --primary-text: #111111;
@@ -13,11 +8,6 @@
   --body-bg: #FFFFFF;
   --body-text: var(--primary-text);
 
-
-  /* =========================
-     NAVBAR
-  ========================== */
-
   --navbar-bg: #FFFFFF;
   --navbar-border: 1px solid #EEEEEE;
   --navbar-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -26,18 +16,8 @@
   --navbar-text-hover: var(--primary-color);
   --navbar-text-active: var(--primary-color);
 
-
-  /* =========================
-     LOGO
-  ========================== */
-
   --logo-primary: #111111;
   --logo-secondary: var(--primary-color);
-
-
-  /* =========================
-     SEARCH BAR
-  ========================== */
 
   --search-bg: #FFFFFF;
   --search-border: 1px solid #DDDDDD;
@@ -48,11 +28,6 @@
 
   --search-shadow: none;
 
-
-  /* =========================
-     HERO
-  ========================== */
-
   --hero-bg: #FFF9F2;
   --hero-title: var(--primary-text);
   --hero-highlight: var(--primary-color);
@@ -62,20 +37,10 @@
   --hero-button-text: #FFFFFF;
   --hero-button-hover: #E95417;
 
-
-  /* =========================
-     SECTION
-  ========================== */
-
   --section-bg: #FFFFFF;
   --section-title: var(--primary-text);
   --section-subtitle: var(--primary-color);
   --section-text: var(--secondary-text);
-
-
-  /* =========================
-     FOOD CARD
-  ========================== */
 
   --food-card-bg: #FFFFFF;
   --food-card-border: 1px solid #EEEEEE;
@@ -91,11 +56,6 @@
   --food-card-button-bg: var(--primary-color);
   --food-card-button-text: #FFFFFF;
 
-
-  /* =========================
-     WHY CHOOSE US
-  ========================== */
-
   --features-bg: #FFF9F2;
   --feature-icon-bg: #FFF0E5;
   --feature-icon: var(--primary-color);
@@ -104,11 +64,6 @@
   --feature-text: var(--secondary-text);
 
   --feature-border: 1px solid #EDE3D9;
-
-
-  /* =========================
-     NEWSLETTER
-  ========================== */
 
   --newsletter-bg: var(--primary-color);
   --newsletter-title: #FFFFFF;
@@ -121,11 +76,6 @@
   --newsletter-button-bg: #111111;
   --newsletter-button-text: #FFFFFF;
 
-
-  /* =========================
-     FOOTER
-  ========================== */
-
   --footer-bg: #121212;
 
   --footer-title: #FFFFFF;
@@ -135,19 +85,9 @@
 
   --footer-border: 1px solid #303030;
 
-
-  /* =========================
-     SOCIAL ICONS
-  ========================== */
-
   --social-bg: #1E1E1E;
   --social-icon: #FFFFFF;
   --social-hover: var(--primary-color);
-
-
-  /* =========================
-     COMMON
-  ========================== */
 
   --border-color: #EEEEEE;
 
@@ -184,35 +124,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  height: 70px;
-  padding: 0 30px;
+  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 20px);
+  min-height: clamp(55px, 8vh, 70px);
+  padding: 12px clamp(15px, 4vw, 30px);
 }
 
 .navbar .logo img {
-  width: 150px;
+  width: clamp(100px, 15vw, 150px);
 }
 
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: clamp(15px, 3vw, 40px);
 }
 
 .navbar .nav-links a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 8px;
+  gap: clamp(4px, 1vw, 8px);
   text-decoration: none;
   color: var(--primary-text);
+  font-size: clamp(13px, 1.2vw, 16px);
 }
 
 .navbar .search-bar {
   width: 100%;
-  max-width: 300px;
-  height: 40px;
-  font-size: 15px;
+  max-width: clamp(200px, 100%, 300px);
+  height: clamp(36px, 5vw, 40px);
+  font-size: clamp(13px, 1.2vw, 15px);
   position: relative;
 }
 
@@ -223,7 +165,7 @@ body {
   background-color: var(--search-bg);
   border: var(--search-border);
   border-width: 1.5px;
-  padding: 0 12px 0 32px;
+  padding: 0 clamp(8px, 2vw, 12px) 0 clamp(26px, 4vw, 32px);
   outline: none;
   transition: border 0.2s ease;
 }
@@ -237,11 +179,11 @@ body {
 }
 
 .navbar .search-bar i {
-  font-size: 16px;
+  font-size: clamp(13px, 1.5vw, 16px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 10px;
+  left: clamp(8px, 1vw, 10px);
   color: var(--search-placeholder);
 }
 
@@ -253,7 +195,7 @@ body {
 
 .section-title {
   width: 100%;
-  margin: 30px 0;
+  margin: clamp(15px, 4vw, 30px) 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -261,39 +203,39 @@ body {
 
 .section-title p {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 600;
   color: var(--primary-color);
   letter-spacing: 1px;
 }
 
 .section-title h2 {
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   text-transform: capitalize;
 }
 
 .section-title span {
-  width: 50px;
+  width: clamp(30px, 5vw, 50px);
   border: 1.5px solid var(--primary-color);
   border-radius: 999px;
-  margin-top: 12px;
+  margin-top: clamp(6px, 1.5vw, 12px);
 }
 
 .cards-section {
   max-width: 1450px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 clamp(12px, 3vw, 30px);
 }
 
 .cards-section .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: clamp(15px, 3vw, 30px);
 }
 
 .cards-section .cards .card {
-  max-width: 280px;
+  max-width: clamp(240px, 100%, 280px);
   width: 100%;
   background-color: var(--food-card-bg);
   border: var(--food-card-border);
@@ -304,7 +246,7 @@ body {
 
 .cards-section .cards .card .image {
   width: 100%;
-  height: 200px;
+  height: clamp(140px, 25vh, 200px);
   background-color: var(--food-card-image-bg);
   overflow: hidden;
 }
@@ -321,17 +263,18 @@ body {
 }
 
 .cards-section .cards .card .details {
-  padding: 14px;
+  padding: clamp(10px, 2vw, 14px);
 }
 
 .cards-section .cards .card .details h3 {
-  font-size: 18px;
+  font-size: clamp(15px, 2vw, 18px);
 }
 
 .cards-section .cards .card .details>p {
   font-weight: 600;
   color: var(--primary-color);
-  margin-top: 10px;
+  margin-top: clamp(6px, 1vw, 10px);
+  font-size: clamp(13px, 1.2vw, 15px);
 }
 
 .cards-section .cards .card .details div {
@@ -342,61 +285,207 @@ body {
 
 .cards-section .cards .card .details div p {
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(16px, 2.2vw, 20px);
 }
 
 .cards-section .cards .card .details div span {
-  height: 35px;
-  width: 35px;
+  height: clamp(28px, 4vw, 35px);
+  width: clamp(28px, 4vw, 35px);
   border-radius: 50%;
   background-color: var(--primary-color);
   color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
 }
 
 .wcu-section {
-  margin-top: 40px;
+  margin-top: clamp(20px, 4vw, 40px);
 }
 
 .wcu-section .cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  background-color: var(--features-bg);
+  padding: clamp(15px, 3vw, 30px) 0;
+  min-height: clamp(70px, 10vh, 100px);
 }
 
 .wcu-section .cards .card {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 0 40px;
+  gap: clamp(10px, 2vw, 20px);
+  padding: 0 clamp(10px, 2vw, 20px);
 }
 
 .wcu-section .cards .card .icon {
-  height: 80px;
-  width: 80px;
+  flex-shrink: 0;
+  height: clamp(50px, 8vw, 80px);
+  width: clamp(50px, 8vw, 80px);
   border-radius: 50%;
   background-color: var(--feature-icon-bg);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: clamp(30px, 5vw, 50px);
   color: var(--primary-color);
 }
 
 .wcu-section .cards .card .icon .fa-solid {
-  font-size: 40px;
+  font-size: clamp(24px, 4vw, 40px);
 }
 
 .wcu-section .cards .card h3 {
-  font-size: 20px;
+  font-size: clamp(16px, 2.5vw, 20px);
 }
 
 .wcu-section .cards .card p {
-  margin-top: 3px;
-  max-width: 180px;
-  font-size: 14px;
+  margin-top: clamp(2px, 0.5vw, 3px);
+  max-width: clamp(140px, 100%, 180px);
+  font-size: clamp(12px, 1.5vw, 14px);
   color: var(--secondary-text);
+}
+
+.newsletter-section {
+  margin-top: clamp(10px, 2vw, 20px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 50px);
+  padding: clamp(15px, 3vw, 30px);
+  background-color: var(--primary-color);
+}
+
+.newsletter-section .left {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 3vw, 30px);
+  color: #FFFFFF;
+}
+
+.newsletter-section .left img {
+  width: clamp(100px, 15vw, 150px);
+}
+
+.newsletter-section .left h3 {
+  font-size: clamp(18px, 3vw, 26px);
+}
+
+.newsletter-section .left p {
+  margin-top: clamp(4px, 1vw, 8px);
+  max-width: clamp(240px, 100%, 350px);
+  font-size: clamp(12px, 1.5vw, 15px);
+}
+
+.newsletter-section .right {
+  width: 100%;
+  max-width: clamp(280px, 100%, 500px);
+  display: flex;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.newsletter-section .right input {
+  flex-grow: 1;
+  height: clamp(40px, 5vw, 50px);
+  border: none;
+  outline: none;
+  padding: 0 clamp(10px, 2vw, 20px);
+  font-size: clamp(13px, 1.5vw, 16px);
+}
+
+.newsletter-section .right button {
+  background-color: var(--newsletter-button-bg);
+  color: #FFFFFF;
+  font-size: clamp(13px, 1.5vw, 16px);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 1vw, 10px);
+  border: none;
+  padding: 0 clamp(12px, 2vw, 20px);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-title);
+  padding: clamp(25px, 4vw, 50px) clamp(12px, 2vw, 20px);
+}
+
+footer>div {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 30px);
+}
+
+footer>div .column {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer>div .column img {
+  width: clamp(100px, 15vw, 150px);
+  margin-top: clamp(-24px, -2vw, -12px);
+}
+
+footer > div span {
+  color: var(--footer-text);
+  font-size: clamp(12px, 1.2vw, 14px);
+  margin-top: clamp(-14px, -1vw, -8px);
+  max-width: clamp(140px, 100%, 180px);
+}
+
+footer > div .links {
+  display: flex;
+  margin-top: clamp(10px, 2vw, 20px);
+  gap: clamp(10px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+footer > div .links i {
+  cursor: pointer;
+}
+
+footer > div p {
+  color: var(--footer-title);
+  font-weight: 500;
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+footer > div a {
+  color: var(--footer-link);
+  text-decoration: none;
+  margin-top: clamp(6px, 1vw, 12px);
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 1vw, 8px);
+  font-size: clamp(12px, 1.2vw, 14px);
+}
+
+footer > div a:hover {
+  color: var(--footer-title);
+}
+
+@media (max-width: 900px) {
+  .navbar .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 400px){
+  * {
+    cursor: default !important;
+  }
+
+  footer {
+    align-items: center;
+  }
 }
