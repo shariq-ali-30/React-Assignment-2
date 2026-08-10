@@ -14,11 +14,10 @@ function App() {
                     </div>
 
                     <div className="nav-links">
-                        <div><a href="" className="active">Home <span></span></a></div>
-                        <div><a href="">Plants <span></span></a></div>
-                        <div><a href="">Categories <span></span></a></div>
-                        <div><a href="">About Us <span></span></a></div>
-                        <div><a href="">Contact <span></span></a></div>
+                        <div><a href="">Home</a></div>
+                        <div><a href="">Menu</a></div>
+                        <div><a href="">About Us</a></div>
+                        <div><a href="">Contact</a></div>
                     </div>
 
                     <div className="search-bar">
@@ -86,7 +85,7 @@ function App() {
 
                 </section>
 
-                <scetion className="wcu-section">
+                <section className="wcu-section">
 
                     <div className="section-title">
                         <p>Why Choose Us</p>
@@ -94,7 +93,41 @@ function App() {
                         <span></span>
                     </div>
 
-                </scetion>
+                    <div className="cards">
+
+                        <div className="card">
+                            <div className="icon">
+                                <i class="fa-solid fa-motorcycle"></i>
+                            </div>
+                            <div>
+                                <h3>Fast Delivery</h3>
+                                <p>Get your fvourite food delivered hot & fresh.</p>
+                            </div>
+                        </div>
+
+                        <div className="card">
+                            <div className="icon">
+                                <i class="ph-fill ph-seal-percent"></i>
+                            </div>
+                            <div>
+                                <h3>Fast Delivery</h3>
+                                <p>Get your fvourite food delivered hot & fresh.</p>
+                            </div>
+                        </div>
+                        
+                        <div className="card">
+                            <div className="icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3>Fast Delivery</h3>
+                                <p>Get your fvourite food delivered hot & fresh.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
 
                 <br />
                 <br />

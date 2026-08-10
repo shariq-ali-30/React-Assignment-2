@@ -200,35 +200,12 @@ body {
 }
 
 .navbar .nav-links a {
-  margin-top: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 8px;
   text-decoration: none;
-  color: var(--secondary-text);
-  transition: color 0.2s ease;
-}
-
-.navbar .nav-links a.active {
   color: var(--primary-text);
-}
-
-.navbar .nav-links a:hover {
-  color: var(--body-text-primary);
-}
-
-.navbar .nav-links a span {
-  width: 0;
-  border: 1.5px solid var(--primary-color);
-  border-radius: 999px;
-  visibility: hidden;
-  transition: width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.navbar .nav-links a.active span {
-  visibility: visible;
-  width: 30px;
 }
 
 .navbar .search-bar {
@@ -378,4 +355,48 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 18px;
+}
+
+.wcu-section {
+  margin-top: 40px;
+}
+
+.wcu-section .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wcu-section .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.wcu-section .cards .card .icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: var(--feature-icon-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.wcu-section .cards .card .icon .fa-solid {
+  font-size: 40px;
+}
+
+.wcu-section .cards .card h3 {
+  font-size: 20px;
+}
+
+.wcu-section .cards .card p {
+  margin-top: 3px;
+  max-width: 180px;
+  font-size: 14px;
+  color: var(--secondary-text);
 }
