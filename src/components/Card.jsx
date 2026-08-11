@@ -1,14 +1,15 @@
-function Card() {
+function Card({image, name, price, rating}) {
+
     return (
         <div className="card">
             <div className="image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLQ89CA9ka1UCO7Jj2yPGeCfcWBnGzae5Q-SdGV1E1_A&s=10" alt="" />
+                <img src={image} />
             </div>
             <div className="details">
-                <h3>Cheezy Margherita pizza</h3>
-                <p><i className="ph-fill ph-star"></i> 4.6</p>
+                <h3>{name}</h3>
+                <p><i className="ph-fill ph-star"></i> {rating}</p>
                 <div>
-                    <p>Rs. 180</p>
+                    <p>Rs. {price}</p>
                     <span><i className="ph-bold ph-plus"></i></span>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import logo from './assets/logo.png'
 import heroImage from './assets/hero-banner.png'
 import newsletterImage from './assets/newsletter-image.png'
 import footerLogo from './assets/footer-logo.png'
+import menu from './data.js'
 
 function App() {
     return (
@@ -17,10 +18,10 @@ function App() {
                     </div>
 
                     <div className="nav-links">
-                        <div><a href="">Home</a></div>
-                        <div><a href="">Menu</a></div>
-                        <div><a href="">About Us</a></div>
-                        <div><a href="">Contact</a></div>
+                        <div><a href="#home">Home</a></div>
+                        <div><a href="#menu">Menu</a></div>
+                        <div><a href="#about">About Us</a></div>
+                        <div><a href="#contact">Contact</a></div>
                     </div>
 
                     <div className="search-bar">
@@ -30,11 +31,11 @@ function App() {
 
                 </div>
 
-                <section className="hero-section">
+                <section className="hero-section" id="home">
                     <img src={heroImage} alt="hero image" />
                 </section>
 
-                <section className="cards-section">
+                <section className="cards-section" id="menu">
 
                     <div className="section-title">
                         <p>Popular Foods</p>
@@ -43,14 +44,14 @@ function App() {
                     </div>
 
                     <div className="cards">
-                        <Card />
-                        <Card />
-                        <Card />
+                        {menu.map((item, idx) =>
+                            <Card image={item.image} name={item.title} price={item.price} rating={item.rating} key={idx} />
+                        )}
                     </div>
 
                 </section>
 
-                <section className="wcu-section">
+                <section className="wcu-section" id="about">
 
                     <div className="section-title">
                         <p>Why Choose Us</p>
@@ -94,7 +95,7 @@ function App() {
 
                 </section>
 
-                <section className="newsletter-section">
+                <section className="newsletter-section" id="contact">
                     <div className="left">
                         <img src={newsletterImage} />
                         <div>
@@ -111,7 +112,7 @@ function App() {
                 <footer>
                     <div className='footer-content'>
                         <div className='column'>
-                            <img src={footerLogo}/>
+                            <img src={footerLogo} />
                             <span>Good food at your doorstep. Every time!</span>
                             <div className="links">
                                 <i className="fa-brands fa-facebook-f"></i>
