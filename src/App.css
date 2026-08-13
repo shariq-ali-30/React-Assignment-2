@@ -125,8 +125,11 @@ body {
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background-color: var(--navbar-bg);
   box-shadow: var(--navbar-shadow);
   border-bottom: var(--navbar-border);
@@ -174,7 +177,7 @@ body {
   background-color: var(--search-bg);
   border: var(--search-border);
   border-width: 1.5px;
-  padding: 0 clamp(8px, 2vw, 12px) 0 clamp(26px, 4vw, 32px);
+  padding: 0 clamp(10px, 2vw, 12px) 0 clamp(28px, 4vw, 32px);
   outline: none;
   transition: border 0.2s ease;
 }
@@ -188,12 +191,16 @@ body {
 }
 
 .navbar .search-bar i {
-  font-size: clamp(13px, 1.5vw, 16px);
+  font-size: clamp(14px, 1.5vw, 16px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: clamp(8px, 1vw, 10px);
   color: var(--search-placeholder);
+}
+
+.hero-section {
+  margin-top: 70px;
 }
 
 .hero-section img {
@@ -308,6 +315,36 @@ body {
   align-items: center;
   font-size: clamp(14px, 2vw, 18px);
   cursor: pointer;
+}
+
+.no-results {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.no-results i {
+  font-size: clamp(40px, 6vw, 60px);
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  opacity: 0.8;
+}
+
+.no-results h3 {
+  font-size: clamp(18px, 3vw, 22px);
+  color: var(--primary-text);
+  margin-bottom: 6px;
+}
+
+.no-results p {
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: var(--secondary-text);
+  max-width: 350px;
 }
 
 .wcu-section {
@@ -499,7 +536,19 @@ footer>div a:hover {
     justify-content: center;
   }
 
+  .cards-section .cards .card {
+    max-width: 300px;
+    width: 100%;
+    background-color: var(--food-card-bg);
+    border: var(--food-card-border);
+    box-shadow: var(--food-card-shadow);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
   .wcu-section .cards {
     gap: 30px;
   }
+
+
 }

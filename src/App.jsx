@@ -1,12 +1,19 @@
 import './App.css'
-import Card from './components/Card'
+import { useState } from "react";
 import logo from './assets/logo.png'
 import heroImage from './assets/hero-banner.png'
 import newsletterImage from './assets/newsletter-image.png'
 import footerLogo from './assets/footer-logo.png'
+import CardsParent from './components/CardsParent.jsx';
 import menu from './data.js'
 
 function App() {
+    const [searchTerm, setSearchTerm] = useState('')
+
+    const filteredMenu = menu.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
+    )
+
     return (
         <>
             <div className="continer">
@@ -26,7 +33,7 @@ function App() {
 
                     <div className="search-bar">
                         <i className="ph-bold ph-magnifying-glass"></i>
-                        <input type="text" placeholder="Search your favourite food..." />
+                        <input onChange={(e) => setSearchTerm(e.target.value.toLowerCase())} type="text" placeholder="Search your favourite food..." />
                     </div>
 
                 </div>
@@ -43,11 +50,7 @@ function App() {
                         <span></span>
                     </div>
 
-                    <div className="cards">
-                        {menu.map((item, idx) =>
-                            <Card image={item.image} name={item.title} price={item.price} rating={item.rating} key={idx} />
-                        )}
-                    </div>
+                    <CardsParent menuItems={filteredMenu} />
 
                 </section>
 
