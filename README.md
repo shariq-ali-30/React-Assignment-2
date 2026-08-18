@@ -1,16 +1,54 @@
-# React + Vite
+# FoodieFast - React Food Menu Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The Project
 
-Currently, two official plugins are available:
+FoodieFast is a responsive food menu website built using React.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The purpose of this assignment was to practice React fundamentals, component-based architecture, props, state management, dynamic rendering, and search functionality by converting a food menu interface into a reusable React application.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Vite
+- Font Awesome
+- Phosphor Icons
+- Google Fonts
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive food menu website
+- Hero banner section
+- Navigation bar with section links
+- Search bar for finding food items
+- Real-time food filtering using React state
+- Dynamic food cards rendered from data
+- Reusable Card component
+- Reusable CardsParent component
+- Food cards with image, name, rating, and price
+- No-results message when no matching food is found
+- "Why Choose Us" section
+- Newsletter subscription section
+- Responsive footer with quick links and contact information
+- Responsive design for mobile, tablet, and desktop devices
+- Component-based React project structure
+
+## What I Learned
+
+Through this assignment, I learned:
+
+- How to create React components
+- How to use props to pass data between components
+- How to manage state using the `useState` hook
+- How to handle user input in React
+- How to filter and display data dynamically
+- How to render lists using the `map()` method
+- How to create reusable components
+- How to structure a React project using separate components and data files
+- How to build a responsive website using React and CSS
+
+## Author
+
+**Shariq Ali**
