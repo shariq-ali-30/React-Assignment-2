@@ -120,7 +120,7 @@ body {
 }
 
 .continer {
-  max-width: 1600px;
+  max-width: 1900px;
   margin: 0 auto;
 }
 
@@ -238,7 +238,7 @@ body {
 }
 
 .cards-section {
-  max-width: 1450px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 clamp(12px, 3vw, 30px);
 }
@@ -550,5 +550,7 @@ footer>div a:hover {
     gap: 30px;
   }
 
-
+  .hero-section {
+    margin-top: 113px;
+  }
 }
